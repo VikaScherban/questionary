@@ -1,0 +1,39 @@
+<div class="result">
+    <div class="information">
+        <div class="name">{{ customer.Name }}</div>
+        <div class="email">{{ customer.Email }}</div>
+        <div class="address" ng-show="customer.City=='' && customer.Country !=''">{{ customer.Country }}</div>
+        <div class="address" ng-show="customer.City!='' && customer.Country!=''">{{ customer.City }}, {{
+            customer.Country }}
+        </div>
+        <div class="social-box">
+            <div ng-show="customer.fb!=''">
+                <span class="soc-name">Facebook:</span>
+                <span class="social">{{customer.fb}}</span>
+            </div>
+            <div ng-show="customer.vk!=''">
+                <span class="soc-name">Вконтакте:</span>
+                <span class="social">{{customer.vk}}</span>
+            </div>
+            <div ng-show="customer.twitter!=''">
+                <span class="soc-name">Twitter:</span>
+                <span class="social">{{customer.twitter}}</span>
+            </div>
+            <div ng-show="customer.odnoklassniki!=''">
+                <span class="soc-name">Одноклассники:</span>
+                <span class="social">{{customer.odnoklassniki}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="avatar-block">
+        <input type="radio"
+               name="avatar"
+               id="{{customer.avatar}}"
+               ng-required="true"
+               value="{{customer.avatar}}">
+        <label class="avatar" for="{{customer.avatar}}"></label>
+    </div>
+</div>
+<div class="back-button">
+    <button class="re-pass" ng-click="Return()">Пройти заново</button>
+</div>

@@ -1,0 +1,34 @@
+<ul class="steps">
+    <li class="step active"><a href="#/first">1</a></li>
+    <li class="step"><a href="">2</a></li>
+    <li class="step"><a href="">3</a></li>
+    <li class="step"><a href="">4</a></li>
+</ul>
+<form name="userForm" novalidate>
+
+    <h3 class="step-line">1. Введите имя и e-mail</h3>
+
+    <div ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+        <input type="text"
+               ng-model="customer.Name"
+               class="user-inf user-name"
+               name="name"
+               placeholder="Имя"
+               ng-maxlength="25"
+               required>
+        <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="error-message"> Поле Имя не заполнено.</p>
+        <p ng-show="userForm.name.$error.maxlength" class="error-message">Имя очень большое.</p>
+    </div>
+
+    <div ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+        <input type="email"
+               ng-model="customer.Email"
+               class="user-inf user-email"
+               ng-required="true"
+               placeholder="example@mail.com"
+               name="email"
+               required>
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="error-message"> Поле Email заполнено некорректно.</p>
+    </div>
+
+</form>

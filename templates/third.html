@@ -1,0 +1,67 @@
+<ul class="steps">
+    <li class="step check"><a href="#/first">1</a></li>
+    <li class="step check"><a href="#/second">2</a></li>
+    <li class="step active"><a href="#third">3</a></li>
+    <li class="step"><a href="">4</a></li>
+</ul>
+<form>
+    <h3 class="step-line">3. Отметьте социальные сети</h3>
+    <div class="network-checks">
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="facebook-check"
+                       ng-model="facebook">
+                Facebook
+            </label>
+            <input type="text"
+                   ng-model="customer.fb"
+                   name="facebook-inp"
+                   class="user-inf net-input"
+                   ng-show="facebook"
+                   placeholder="Ваша страница в fb">
+        </div>
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="vk-check"
+                       ng-model="vk">
+                Вконтакте
+            </label>
+            <input type="text"
+                   ng-model="customer.vk"
+                   name="vk-inp"
+                   class="user-inf net-input"
+                   ng-show="vk"
+                   placeholder="Ваша страница в vk">
+        </div>
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="twitter-check"
+                       ng-model="twitter">
+                Twitter
+            </label>
+            <input type="text"
+                   ng-model="customer.twitter"
+                   name="twitter-inp"
+                   class="user-inf net-input"
+                   ng-show="twitter"
+                   placeholder="Ваша страница в twitter">
+        </div>
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="classmate-check"
+                       ng-model="classmate">
+                Одноклассники
+            </label>
+            <input type="text"
+                   ng-model="customer.odnoklassniki"
+                   name="classmate-inp"
+                   class="user-inf net-input"
+                   ng-show="classmate"
+                   placeholder="Ваша страница в odnoklassniki">
+        </div>
+    </div>
+</form>

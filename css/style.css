@@ -1,0 +1,390 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+input{
+    outline:none;
+}
+
+.cbalink{
+    display: none;
+}
+
+.wrapper{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 180px;
+}
+
+.step{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-align: center;
+    color: #bbb;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.step a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.step.active{
+    color: black;
+}
+.step.check{
+    color: #ff9800;
+}
+
+.step-line{
+    font-weight: normal;
+    color: rgb(102,102,102);
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+.user-inf{
+    border-radius: 2px;
+    width: 310px;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    color: rgb(102,102,102);
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.user-name{
+    text-transform: capitalize;
+}
+.user-email{
+    margin-top: 16px;
+}
+
+.prev,.next{
+    width: 147px;
+    height: 35px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    color: #ff9800;
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    float: left;
+    text-align: left;
+    cursor: pointer;
+}
+.prev:hover,.next:hover{
+    opacity: 0.7;
+}
+.prev{
+    margin-right: 16px;
+}
+
+.angle-left, .angle-right{
+    font-size: 25px;
+    position: relative;
+    bottom: 3px;
+}
+.angle-right{
+    left: 20px;
+}
+.prev .button-name{
+    left: 10px;
+}
+.navigation{
+    position: absolute;
+    top: 570px;
+}
+.button-name{
+    position: relative;
+    bottom: 4px;
+}
+.error{
+    color: red;
+}
+.has-error .error-message{
+    color: red;
+    font-size: 14px;
+}
+.has-error input, .has-error select{
+    border: 1px solid red;
+}
+.has-error ~ .select{
+    bottom: -32px;
+}
+
+/*Step2*/
+.select{
+    position: relative;
+    display: block;
+    border-radius: 2px;
+    width: 310px;
+    height: 50px;
+    border: none;
+    font-size: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.select:after{
+    content: "▼";
+    color: #bbb;
+    padding: 12px 8px;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+select{
+    height: 50px;
+    background-color:#fff;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 310px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: #bbb;
+}
+select option{
+    color: #000;
+}
+.country-select{
+    margin-bottom: 16px;
+}
+
+/*Step3*/
+.net-input{
+    width: 240px;
+    height: 38px;
+    padding: 0;
+}
+.network-checks div:nth-child(1) label{
+    margin-right: 63px;
+}
+.network-checks div:nth-child(2) label{
+    margin-right: 55px;
+}
+.network-checks div:nth-child(3) label{
+    margin-right: 81px;
+}
+.network-checks div:nth-child(4) label{
+    margin-right: 16px;
+}
+
+.network-checks div label{
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.network-checks input{
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/*Step4*/
+.avatars{
+    width: 655px;
+    position: relative;
+    right: 149px;
+}
+.avatar{
+    display: inline-block;
+    width: 150px;
+    max-width:100%;
+    height:150px;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.avatars input, .avatar-block input{
+    display: none;
+}
+.avatars input:checked+label{
+    border: 3px solid #ff9800;
+}
+label[for="av1"]{
+    background-image: url("../img/cat1.jpg");
+}
+label[for="av2"]{
+    background-image: url("../img/cat2.jpg");
+}
+label[for="av3"]{
+    background-image: url("../img/cat3.jpg");
+}
+label[for="av4"]{
+    background-image: url("../img/dog4.jpg");
+    margin: 0;
+}
+
+/*Last Page*/
+.result{
+    width: 560px;
+    height: 245px;
+    background-color: #fff;
+    padding: 24px;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin-left: -104px;
+}
+.information{
+    width: 59.8%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: 100%;
+}
+.avatar-block{
+    width: 39.4%;
+    display: inline-block;
+}
+.result .avatar{
+    width: 200px;
+    height: 195px;
+    margin: 0;
+}
+.social-box{
+    position: absolute;
+    bottom: 0;
+}
+.social-box div{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+.name{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.email, .address, .social{
+    color: rgb(102,102,102);
+}
+.soc-name {
+    color: rgb(0, 21, 188);
+}
+.email{
+    margin-top: 8px;
+}
+.address{
+    margin-top: 38px;
+}
+.back-button{
+    width: 560px;
+    text-align: center;
+    margin-left: -104px;
+}
+.re-pass{
+    width: 150px;
+    height: 35px;
+    background-color: #ff9800;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*Phone layout*/
+@media all and (max-width: 640px) {
+    .avatars{
+        width: auto;
+        position: static;
+    }
+    .avatar{
+        width: 120px;
+        height: 120px;
+    }
+    .wrapper{
+        width: 300px;
+        margin-top: 50px;
+    }
+    .step-line{
+        margin-bottom: 25px;
+    }
+    .result, .back-button{
+        width: auto;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .result{
+        height: 460px;
+    }
+    .avatar-block{
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 35px;
+    }
+    .address{
+        margin-top: 8px;
+        margin-bottom: 14px;
+    }
+    .social-box{
+        position: static;
+    }
+    .information{
+        width: auto;
+        position: static;
+        height: auto;
+    }
+    .navigation{
+        margin-bottom: 20px;
+        top: 484px;
+    }
+    .next .angle-right{
+        left: 12px;
+    }
+    .prev .button-name{
+        left: 1px;
+    }
+    .prev, .next{
+        width: 133px;
+    }
+    .network-checks div label{
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    .social-box div{
+        max-width: 253px;
+    }
+    .user-inf{
+        width: 300px;
+    }
+    .name{
+        text-transform: capitalize;
+    }
+
+}

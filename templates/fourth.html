@@ -1,0 +1,45 @@
+<ul class="steps">
+    <li class="step check"><a href="#/first">1</a></li>
+    <li class="step check"><a href="#/second">2</a></li>
+    <li class="step check"><a href="#third">3</a></li>
+    <li class="step active"><a href="#/fourth">4</a></li>
+</ul>
+<form>
+    <h3 class="step-line">2. Выберите любимого котика</h3>
+
+    <div class="avatars">
+        <input type="radio"
+               ng-model = "customer.avatar"
+               name = "avatar"
+               id="av1"
+               ng-required="true"
+               value="av1">
+        <label class="avatar" for="av1"></label>
+
+        <input type="radio"
+               ng-model = "customer.avatar"
+               name = "avatar"
+               id="av2"
+               ng-required="true"
+               value="av2">
+        <label class="avatar" for="av2"></label>
+
+        <input type="radio"
+               ng-model = "customer.avatar"
+               name = "avatar"
+               id="av3"
+               ng-required="true"
+               value="av3">
+        <label class="avatar" for="av3"></label>
+
+        <input type="radio"
+               ng-model = "customer.avatar"
+               name = "avatar"
+               id="av4"
+               ng-required="true"
+               value="av4">
+        <label class="avatar" for="av4"></label>
+
+        <div ng-show="customer.avatar == 'av4'" class="error">Вы выбрали собачку. А надо котика.</div>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+<html ng-app="questApp">
+<head>
+    <title>Questionary</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrapper" ng-controller="AppCtrl">
+
+    <div>
+        <ng-view></ng-view>
+    </div>
+
+    <div class="navigation" id="navigation">
+        <button class="prev" ng-click="goBack()">
+            <span class="angle-left">&#60;</span>
+            <span class="button-name">Предыдущий</span>
+        </button>
+        <button class="next" ng-click="goNext()">
+            <span class="button-name">Следующий</span>
+            <span class="angle-right">&#62;</span>
+        </button>
+    </div>
+
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<!--Angular.js Route-->
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>

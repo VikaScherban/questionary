@@ -1,0 +1,32 @@
+<ul class="steps">
+    <li class="step check"><a href="#/first">1</a></li>
+    <li class="step active"><a href="#/second">2</a></li>
+    <li class="step"><a href="">3</a></li>
+    <li class="step"><a href="">4</a></li>
+</ul>
+<form name="secondForm" novalidate>
+
+    <h3 class="step-line">2. Выберите страну и город</h3>
+
+    <div class="select country-select" ng-class="{ 'has-error' : secondForm.country.$error.required }">
+        <select ng-model="customer.Country"
+                ng-change="getCountryCities()"
+                class="form-control"
+                name="country"
+                required>
+            <option value="" >Страна</option>
+            <option ng-repeat="country in countries">{{ country }}</option>
+        </select>
+        <p ng-show="secondForm.country.$error.required" class="error-message">Нужно выбрать страну.</p>
+    </div>
+
+    <div class="select">
+        <select ng-model="customer.City"
+                class="form-control"
+                name="city">
+            <option value="">Город</option>
+            <option ng-repeat="city in cities">{{ city.name }}</option>
+        </select>
+    </div>
+
+</form>
