@@ -54,8 +54,8 @@ questApp.controller('AppCtrl', ['$scope', '$http', '$location', 'CustomerService
         });
 
         $scope.getCountryCities = function () {
-            if ($scope.customer.Country == "Ukraine") $scope.cities = CustomerService.getCountryCity(1, citylist);
-            else  $scope.cities = CustomerService.getCountryCity(0, citylist);
+            if ($scope.customer.Country == "Ukraine") $scope.cities = CustomerService.getCountryCity(1, citylist, $scope.customer.Country);
+            else  $scope.cities = CustomerService.getCountryCity(0, citylist, '');
         };
 
         $scope.Return = function () {
@@ -81,10 +81,10 @@ questApp.factory("CustomerService", [
 
         var service = {};
 
-        service.getCountryCity = function (country, citylist) {
+        service.getCountryCity = function (country, citylist, countryname) {
             var items = {};
             for (var index in citylist) {
-                if (citylist[index].country == country && citylist[index].name != "Ukraine") {
+                if (citylist[index].country == country && citylist[index].name != countryname) {
                     items[index] = citylist[index];
                 }
             }
